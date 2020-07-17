@@ -105,23 +105,6 @@ class App extends React.Component {
   }
 
   onSubmit(e, data) {
-
-    // let updatedState = {
-    //   'date':'2018-01-01',
-    //   'songs':[
-    //     {'artist':'Bob','title':'Bob','rank':'1'},
-    //     {'artist':'Bob','title':'Bob','rank':'2'},
-    //     {'artist':'Bob','title':'Bob','rank':'3'}
-    //   ],
-    //   'correct':0,
-    //   'currentSong':0,
-    //   'transition':false,
-    //   'topMessage':null,
-    //   'bottomMessage':null
-    // }
-
-    // let moredata =
-
     fetch('http://localhost:5000/chart/'+data.numSongs+'?from='+data.startYear+'&to='+data.endYear)
       .then(res=>
         res.json().then(data=>
@@ -160,23 +143,6 @@ class App extends React.Component {
 
     this.setState(updatedState)
 
-  }
-
-  componentDidMount() {
-
-    // let updatedState = {
-    //   'date':'2018-01-01',
-    //   'songs':[
-    //     {'artist':'Bob','title':'Bob','rank':'1'},
-    //     {'artist':'Bob','title':'Bob','rank':'2'},
-    //     {'artist':'Bob','title':'Bob','rank':'3'}
-    //   ],
-    //   'correct':0,
-    //   'currentSong':0,
-    //   'transition':false
-    // }
-
-    // this.setState(updatedState)
   }
 }
 
