@@ -1,0 +1,88 @@
+.header-div {
+  padding:1em 0;
+background-color:rgba(0,80,200,.8);
+
+
+
+  border-bottom:2px solid rgba(0,0,0,.3);
+}
+
+.header-title {
+  color:rgba(255,255,255,.8);
+  font-size:1.5em;
+  margin-left:10px;
+}
+
+.header-title:hover {
+  color:rgba(255,255,255,.9);
+  cursor:pointer;
+}
+
+.game-info {
+  float:right;
+  color:rgba(255,255,255,.8);
+  font-size:1em;
+  line-height:1.8em;
+  font-weight:bold;
+  margin-right:30px;
+}
+
+.footer-div {
+  height:3em;
+  background-color:#444;
+  color:#eee;
+  line-height:3em;
+  font-size:1em;
+  text-align:center;
+}
+
+.intro {
+  padding:2vw;
+}
+
+.intro-submit {
+  padding:20px 25px;
+  margin:0 auto;
+  max-width:100px;
+  font-size:1.1em;
+  background-color:rgba(0,80,200,.9);
+  border-bottom:2px solid rgba(0,0,0,.3);
+  color:#eee;
+  -webkit-transition:all .1s;
+}
+
+.intro-submit:hover {
+  padding-bottom:21px;
+  background-color:rgba(0,80,220,.9);
+  border-bottom:1px solid rgba(0,0,0,.2);
+  color:#fff;
+  cursor:pointer;
+}
+
+.settings-wrap {
+  margin:0 auto;
+  text-align:center;
+}
+
+.transition {
+  text-align:center;
+}
+
+.transition div {
+  padding:20px 25px;
+  margin:0 auto;
+  max-width:100px;
+  font-size:1.1em;
+  background-color:rgba(0,80,200,.9);
+  border-bottom:2px solid rgba(0,0,0,.3);
+  color:#eee;
+  -webkit-transition:all .1s;
+}
+
+.transition div:hover {
+  padding-bottom:21px;
+  background-color:rgba(0,80,220,.9);
+  border-bottom:1px solid rgba(0,0,0,.2);
+  color:#fff;
+  cursor:pointer;
+}

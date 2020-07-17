@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
+
+@media only screen and (min-width: 800px) {
+
+    .game-screen .letter-blank {
+        font-size:2em;
+    }
+}
+
+.outro {
+    max-width:400;
+    font-size:2em;
+    margin:20px auto;
+    padding:.5vw;
+    border-radius:3px;
+    background-color:rgba(0,0,0,.1);
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+    .outro h1 {
+        padding:0 .3em;
+        font-size:.9em;
+    }
+
+    .outro p {
+        padding:0 .5em;
+        font-size:.6em;
+    }
+
+.question-title-wrap {
+    max-width:400;
+    font-size:2em;
+    margin:0 auto;
+    padding:.5vw;
+    border-radius:3px;
+    background-color:rgba(0,0,0,.1);
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+    .question-title-wrap h1 {
+        padding:0 .3em;
+        font-size:.9em;
+    }
+
+    .question-title-wrap p {
+        padding:0 .5em;
+        font-size:.6em;
+    }
+
+
+.guess-trials-wrap {
+    display:block;
+    margin-left:auto;
+    width:auto;
+    text-align:center;
+}
+
+.guess-trial {
+    display:inline;
+    font-size:4vw;
+    font-family:'PT Mono';
+    border-bottom:1px solid black;
+    text-align:center;
+    white-space:pre;
+    padding:0 5vw;
+
+}
+
+.guess-trial-space {
+    display:inline;
+    white-space:pre;
+    font-family:'PT Mono';
+    width:1vw;
+    padding:0 5vw;
+}
+
+.game-screen {
+    display:block;
+    padding:2vw 1.5vw;
+    margin:0 auto;
+    text-align:center;
+    width:90vw;
+    max-width:800px;
+    background-color:rgba(0,80,200,.8);
+    border-bottom:2px solid rgba(0,0,0,.3);
+    color:white;
+}
+
+    .letter-blank {
+        display:inline;
+        white-space:pre;
+        font-size:1.2em;
+        padding:0 .5vw;
+        border-bottom:2px solid white;
+        font-family:'PT Mono';
+    }
+
+    .letter-blank-space {
+        display:inline;
+        white-space:pre;
+        font-size:1.5vw;
+        padding:0 .2vw;
+    }
+
+.foldout-wrap {
+    display:block;
+    width:800px;
+    height:50px;
+    background-color:rgba(0,0,0,.1);
+    margin:0 auto;
+}
+
+.foldout-wrap.expanded {
+    height:200px;
+}
+
+    .foldout-title {
+        width:100%;
+        height:50px;
+        font-size:1.5em;
+        text-align:center;
+        line-height:50px;
+        background-color:#777;
+    }
+
+    .foldout-title:hover {
+        cursor:pointer;
+    }
+
+.letters-screen {
+    display:block;
+    max-width:800px;
+    width:90vw;
+    margin:0 auto;
+    text-align:center;
+}
+
+    .letter-button {
+        display:inline-block;
+        /*background-color:rgba(0,0,0,.3);*/
+        font-size:2em;
+        padding:.5vw;
+        margin-top:-10px;
+        /*padding:.3em;*/
+        margin-left:.7vw;
+        /*background-color:rgba(255,0,0,.7);*/
+        /*border:2px solid rgba(0,0,0,.1);*/
+    }
+
+    .letter-button:hover {
+        cursor:pointer;
+        background-color:rgba(0,0,0,.2);
+    }
