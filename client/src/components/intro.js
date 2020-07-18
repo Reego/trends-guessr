@@ -19,7 +19,7 @@ class Settings extends React.Component {
         <React.Fragment>
         <div className='intro'>
             <div>
-            <h1>Chart Guessr</h1>
+            <h1>Charts Guessr</h1>
             <p>See how many songs you can guess!<br/><br/> The chosen chart will belong to a random date between the chosen values of "Start Year" and "End Year"</p>
             </div>
             <br/>

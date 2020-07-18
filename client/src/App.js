@@ -59,6 +59,8 @@ class Transition extends React.Component {
   }
 }
 
+const allLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
 class App extends React.Component {
 
   constructor(props) {
@@ -110,16 +112,28 @@ class App extends React.Component {
         res.json().then(data=>
             {
               data['songs'].reverse()
-            this.setState(
-            {
-              'date':data['date'],
-              'songs':data['songs'],
-              'correct':0,
-              'currentSong':0,
-              'transition':false,
-              'topMessage':null,
-              'bottomMessage':null
-            }
+              for(let i = 0; i < data.songs.length; i++) {
+                const actualSongTitle = data.songs[i].title.toUpperCase();
+                let revisedSongTitle = "";
+                for(let g = 0; g < actualSongTitle.length; g++) {
+                  const letter = actualSongTitle.charAt(g);
+                  if(allLetters.includes(letter)) {
+                    revisedSongTitle += letter;
+                  }
+                }
+                data.songs[i].actualSongTitle = actualSongTitle;
+                data.songs[i].title = revisedSongTitle;
+              }
+              this.setState(
+              {
+                'date':data['date'],
+                'songs':data['songs'],
+                'correct':0,
+                'currentSong':0,
+                'transition':false,
+                'topMessage':null,
+                'bottomMessage':null
+              }
             )
           }
           )

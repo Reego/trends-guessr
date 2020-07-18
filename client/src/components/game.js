@@ -50,17 +50,20 @@ const Break = (props) => {
     return <div style={{height:size, width:'100%'}}></div>
 }
 
+const allLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
 const GameScreen = (props) => {
 
     let items = []
     let title = props.song.title.toUpperCase()
-    for(let i = 0; i < title.length; i++) {
-        const letter = title.charAt(i)
+    let actualSongTitle = props.song.actualSongTitle;
+    for(let i = 0; i < actualSongTitle.length; i++) {
+        const letter = actualSongTitle.charAt(i)
         //console.log(props.usedLetters)
 
         let extra = null
 
-        if(i < title.length - 1) {
+        if(i < actualSongTitle.length - 1) {
             if(letter === ' ') {
                 items.push(
                     <React.Fragment key={i}>
@@ -71,14 +74,14 @@ const GameScreen = (props) => {
                 )
                 continue
             }
-            else if(i < title.length - 1 && title.charAt(i+1) !== ' ') {
+            else if(i < actualSongTitle.length - 1 && actualSongTitle.charAt(i+1) !== ' ') {
                 extra = <span className='letter-blank-space'>  </span>
             }
         }
 
         items.push(
             <React.Fragment key={i}>
-            <LetterBlank key={i} value={(props.usedLetters.includes(letter)) ? letter : ' '}/>
+            <LetterBlank key={i} value={(props.usedLetters.includes(letter) || !allLetters.includes(letter)) ? letter : ' '}/>
             {extra}
             </React.Fragment>
         )
@@ -87,8 +90,6 @@ const GameScreen = (props) => {
     return <div className='game-screen'>{items}</div>
 
 }
-
-const allLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
 const LettersScreen = (props) => {
 
@@ -162,7 +163,7 @@ class Game extends React.Component {
             if(endRound)
                 this.onEndRound(
                     {
-                        'topMessage':this.props.song.title + ' by ' + this.props.artist,
+                        'topMessage':this.props.song.actualSongTitle + ' by ' + this.props.artist,
                         'bottomMessage':'Good job! You guessed it!',
                         'correct':true
                     }
@@ -182,7 +183,7 @@ class Game extends React.Component {
             if(endRound)
                 this.onEndRound(
                     {
-                        'topMessage':this.props.song.title + ' by ' + this.props.artist,
+                        'topMessage':this.props.song.actualSongTitle + ' by ' + this.props.artist,
                         'bottomMessage':'Nice try... better luck next time!',
                         'correct':false
                     }
